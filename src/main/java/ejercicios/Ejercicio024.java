@@ -17,7 +17,23 @@ public class Ejercicio024 {
         /*COMPLETAR
          * CODIGO AQUI
          */
-        
+        int suma = 0;
+        int max = notas[0];
+        int min = notas[0];
+        for (int i = 0; i < notas.length; i++) {
+            suma += notas[i];
+            if (notas[i] > max) {
+                max = notas[i];
+            }
+
+            if (notas[i] < min) {
+                min = notas[i];
+            }
+        }
+        double media = (double) suma / notas.length;
+        System.out.println("Media: " + media);
+        System.out.println("Nota máxima: " + max);
+        System.out.println("Nota mínima: " + min); 
         scanner.close();
     }
 

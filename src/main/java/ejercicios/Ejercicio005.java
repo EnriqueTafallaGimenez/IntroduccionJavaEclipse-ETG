@@ -4,7 +4,13 @@ public class Ejercicio005 {
 	
 	//COMPLETAR METODO
 	public String describirNumero(int numero) {
-		return "";
+		if (numero > 0) {
+		    return "Es positivo.";
+		} else if (numero < 0) {
+		    return "Es negativo.";
+		} else {
+		    return "Es cero.";
+		}
     }
 
     public static void main(String[] args) {

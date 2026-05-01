@@ -6,34 +6,27 @@ public class Ejercicio037 {
 	
 	//COMPLETAR METODO
 	public void contarRepeticiones() {
-		Scanner scanner = new Scanner(System.in);
+		java.util.Scanner scanner = new java.util.Scanner(System.in);
+	    int[] numeros = new int[5];
+	    System.out.println("Introduce 5 números:");
+	    for (int i = 0; i < 5; i++) {
+	        numeros[i] = scanner.nextInt();
+	    }
 
-        int[] numeros = new int[5];
-
-        for (int i = 0; i < numeros.length; i++) {
-            numeros[i] = Integer.parseInt(scanner.nextLine());
-        }
-
-        for (int i = 0; i < numeros.length; i++) {
-            int contador = 0;
-            boolean yaContado = false;
-
-            for (int j = 0; j < i; j++) {
-                if (numeros[i] == numeros[j]) {
-                    yaContado = true;
-                    break;
-                }
-            }
-            if (!yaContado) {
-                for (int j = 0; j < numeros.length; j++) {
-                    if (numeros[i] == numeros[j]) {
-                        contador++;
-                    }
-                }
-                System.out.println(numeros[i] + ": " + contador);
-            }
-        }
-    } 
+	    boolean[] visitado = new boolean[5];
+	    for (int i = 0; i < 5; i++) {
+	        if (visitado[i]) continue;
+	        int count = 1;
+	        for (int j = i + 1; j < 5; j++) {
+	            if (numeros[i] == numeros[j]) {
+	                visitado[j] = true;
+	                count++;
+	            }
+	        }
+	        System.out.println(numeros[i] + " se repite " + count + " vez/veces");
+	    }
+	    scanner.close();
+	} 
     public static void main(String[] args) {
         Ejercicio037 ejercicio = new Ejercicio037();
         ejercicio.contarRepeticiones();

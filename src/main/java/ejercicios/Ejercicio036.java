@@ -7,24 +7,25 @@ public class Ejercicio036 {
 	//COMPLETAR METODO
 	public void comprobarPalindromo() {
 		Scanner scanner = new Scanner(System.in);
-
-        String texto = scanner.nextLine();
-
-        texto = texto.replaceAll("\\s+", "").toLowerCase();
-
-        String invertido = "";
-
-
-        for (int i = texto.length() - 1; i >= 0; i--) {
-            invertido += texto.charAt(i);
-        }
-
-        if (texto.equals(invertido)) {
-            System.out.println("Es un palíndromo");
-        } else {
-            System.out.println("No es un palíndromo");
-        }
-    }
+	    int[] numeros = new int[5];
+	    System.out.println("Introduce 5 números:");
+	    for (int i = 0; i < 5; i++) {
+	        numeros[i] = scanner.nextInt();
+	    }
+	    boolean esPalindromo = true;
+	    for (int i = 0; i < 2; i++) {
+	        if (numeros[i] != numeros[4 - i]) {
+	            esPalindromo = false;
+	            break;
+	        }
+	    }
+	    if (esPalindromo) {
+	        System.out.println("¡El array ES palíndromo!");
+	    } else {
+	        System.out.println("El array NO es palíndromo.");
+	    }
+	    scanner.close();
+	}
     
     public static void main(String[] args) {
         Ejercicio036 ejercicio = new Ejercicio036();

@@ -7,31 +7,26 @@ public class Ejercicio025 {
 	//COMPLETAR METODO
 	public void numerosPrimosHastaN() {
 		Scanner scanner = new Scanner(System.in);
-
 	    System.out.print("Introduce un número: ");
 	    int n = scanner.nextInt();
-	    for (int i = 1; i <= n; i++) {
+	    System.out.println("Números primos hasta " + n + ":");
+	    for (int i = 2; i <= n; i++) {
 	        if (esPrimo(i)) {
-	            System.out.println(i);
+	            System.out.print(i + " ");
 	        }
 	    }
-	    scanner.close(); 
-    }
+	    System.out.println();
+	    scanner.close();
+	}
 	
 	//COMPLETAR METODO
 	private boolean esPrimo(int n) {
-		if (n <= 1) {
-	        return false;
+		if (n <= 1) return false;
+	    for (int i = 2; i * i <= n; i++) {
+	        if (n % i == 0) return false;
 	    }
-
-	    for (int i = 2; i < n; i++) {
-	        if (n % i == 0) {
-	            return false;
-	        }
-	    }
-
 	    return true;
-    }
+	}
 
     public static void main(String[] args) {
         Ejercicio025 ejercicio = new Ejercicio025();

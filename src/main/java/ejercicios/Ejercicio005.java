@@ -5,11 +5,11 @@ public class Ejercicio005 {
 	//COMPLETAR METODO
 	public String describirNumero(int numero) {
 		if (numero > 0) {
-		    return "Es positivo.";
+		    return "El número es positivo.";
 		} else if (numero < 0) {
-		    return "Es negativo.";
+		    return "El número es negativo.";
 		} else {
-		    return "Es cero.";
+		    return "El número es cero.";
 		}
     }
 

@@ -7,28 +7,17 @@ public class Ejercicio030 {
 	//COMPLETAR METODO
 	public void procesarNumeros() {
 		Scanner scanner = new Scanner(System.in);
-
-	    int suma = 0;
-	    int positivos = 0;
-	    int negativos = 0;
-
-	    while (scanner.hasNextLine()) {
-	        int numero = Integer.parseInt(scanner.nextLine());
-
-	        if (numero == 0) break;
-
-	        if (numero > 0) {
-	            positivos++;
-	        } else {
-	            negativos++;
+	    System.out.println("Introduce 5 números:");
+	    int max = Integer.MIN_VALUE;
+	    for (int i = 0; i < 5; i++) {
+	        System.out.print("Número " + (i + 1) + ": ");
+	        int num = scanner.nextInt();
+	        if (num > max) {
+	            max = num;
 	        }
-
-	        suma += numero;
 	    }
-
-	    System.out.println("Suma: " + suma);
-	    System.out.println("Positivos: " + positivos);
-	    System.out.println("Negativos: " + negativos);
+	    System.out.println("El mayor número es: " + max);
+	    scanner.close();
 	}
     
     public static void main(String[] args) {

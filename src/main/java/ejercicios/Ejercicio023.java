@@ -7,26 +7,24 @@ public class Ejercicio023 {
 	//COMPLETAR METODO
 	public void contarVocales() {
 		Scanner scanner = new Scanner(System.in);
-
 	    System.out.print("Introduce una frase: ");
 	    String frase = scanner.nextLine();
-	    int resultado = contarVocalesEnFrase(frase);
-	    System.out.println("Número de vocales: " + resultado);
+	    int count = contarVocalesEnFrase(frase);
+	    System.out.println("La frase tiene " + count + " vocales.");
 	    scanner.close();
-        
-    }
+	}
 	//COMPLETAR METODO
     private int contarVocalesEnFrase(String frase) {
-    	 int contador = 0;
-    	    frase = frase.toLowerCase();
-    	    for (int i = 0; i < frase.length(); i++) {
-    	        char c = frase.charAt(i);
-    	        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-    	            contador++;
-    	        }
-    	    }
-    	    return contador;
-    }
+    	if (frase == null) return 0;
+	    int count = 0;
+	    String vocales = "aeiouAEIOU";
+	    for (char c : frase.toCharArray()) {
+	        if (vocales.indexOf(c) != -1) {
+	            count++;
+	        }
+	    }
+	    return count;
+	}  
     
 
     public static void main(String[] args) {

@@ -8,32 +8,30 @@ public class Ejercicio024 {
 	public void calculadoraNotas() {
         Scanner scanner = new Scanner(System.in);
         int[] notas = new int[5];
-        
+
         for (int i = 0; i < 5; i++) {
             System.out.print("Introduce nota " + (i + 1) + ": ");
             notas[i] = scanner.nextInt();
         }
-        
+
         /*COMPLETAR
          * CODIGO AQUI
          */
         int suma = 0;
         int max = notas[0];
         int min = notas[0];
-        for (int i = 0; i < notas.length; i++) {
-            suma += notas[i];
-            if (notas[i] > max) {
-                max = notas[i];
-            }
-
-            if (notas[i] < min) {
-                min = notas[i];
-            }
+        for (int nota : notas) {
+            suma += nota;
+            if (nota > max) max = nota;
+            if (nota < min) min = nota;
         }
-        double media = (double) suma / notas.length;
+        double media = suma / 5.0;
+        
+        System.out.println("=== RESULTADOS ===");
         System.out.println("Media: " + media);
-        System.out.println("Nota máxima: " + max);
-        System.out.println("Nota mínima: " + min); 
+        System.out.println("Nota más alta: " + max);
+        System.out.println("Nota más baja: " + min);
+
         scanner.close();
     }
 

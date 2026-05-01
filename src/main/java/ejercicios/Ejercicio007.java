@@ -20,7 +20,7 @@ public class Ejercicio007 {
 	        case 7:
 	            return "Domingo";
 	        default:
-	            return "estas de vacaciones";
+	            return "Número inválido (usa 1-7)";
 	    }
     }
 

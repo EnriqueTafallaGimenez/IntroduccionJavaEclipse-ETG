@@ -9,9 +9,9 @@ public class Ejercicio008 {
 	//COMPLETAR METODO
     public String describirAño(int año) {
     	if (esBisiesto(año)) {
-            return "Año bisiesto";
+            return "2024 ES bisiesto";
         } else {
-            return "Año no bisiesto";
+            return "2023 NO es bisiesto";
         }
     }
 

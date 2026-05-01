@@ -7,19 +7,19 @@ public class Ejercicio029 {
 	//COMPLETAR METODO
 	public void secuenciaFibonacci() {
 		Scanner scanner = new Scanner(System.in);
-	    
-	    int n = Integer.parseInt(scanner.nextLine());
-	    int a = 0;
-	    int b = 1;
-	    
+	    System.out.print("Introduce el número de términos: ");
+	    int n = scanner.nextInt();
+	    System.out.println("Secuencia Fibonacci (" + n + " términos):");
+	    int a = 0, b = 1;
 	    for (int i = 0; i < n; i++) {
-	        System.out.println(a);
-	        
-	        int siguiente = a + b;
+	        System.out.print(a + (i == n - 1 ? "" : " "));
+	        int temp = a;
 	        a = b;
-	        b = siguiente;
-	    }    
-    }
+	        b = temp + b;
+	    }
+	    System.out.println();
+	    scanner.close();
+	}
     public static void main(String[] args) {
         Ejercicio029 ejercicio = new Ejercicio029();
         ejercicio.secuenciaFibonacci();

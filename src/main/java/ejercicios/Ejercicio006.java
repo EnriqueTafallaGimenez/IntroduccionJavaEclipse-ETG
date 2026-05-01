@@ -4,17 +4,19 @@ public class Ejercicio006 {
 	
 	//COMPLETAR METODO
 	public String obtenerCalificacion(double nota) {
-		if(nota < 5) {
-			return "Insuficiente";
-		}else if (nota == 5) {
-			return "Suficiente";
-		}else if (nota == 6) {
-			return "Bien";
-		}else if (nota == 7 || nota == 8) {
-			return "Notable";
-		} else {
-			return "Sobresaliente";
-		}
+		if (nota < 0 || nota > 10) {
+	        return "Nota no válida";
+	    } else if (nota < 5) {
+	        return "Insuficiente";
+	    } else if (nota < 6) {
+	        return "Suficiente";
+	    } else if (nota < 7) {
+	        return "Bien";
+	    } else if (nota < 9) {
+	        return "Notable";
+	    } else {
+	        return "Sobresaliente";
+	    }
     }
 
     public static void main(String[] args) {

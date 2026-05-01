@@ -11,20 +11,20 @@ public class Ejercicio026 {
 	public void gestorUsuarios() {
 		Scanner scanner = new Scanner(System.in);
 	    List<String> usuarios = new ArrayList<>();
-
+	    String nombre;
+	    System.out.println("Introduce nombres (escribe 'fin' para terminar):");
 	    while (true) {
-	        String entrada = scanner.nextLine();
-
-	        if (entrada.equalsIgnoreCase("fin")) {
-	            break;
-	        }
-
-	        usuarios.add(entrada);
+	        nombre = scanner.nextLine();
+	        if (nombre.equalsIgnoreCase("fin")) break;
+	        usuarios.add(nombre);
 	    }
-
-	    for (String u : usuarios) {
-	        System.out.println(u);
+	    if (usuarios.isEmpty()) {
+	        System.out.println("No se introdujeron nombres.");
+	    } else {
+	        System.out.println("Cantidad de nombres: " + usuarios.size());
+	        System.out.println("Lista de nombres: " + usuarios);
 	    }
+	    scanner.close();
 	}
 
     public static void main(String[] args) {

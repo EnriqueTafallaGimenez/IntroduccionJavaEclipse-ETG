@@ -256,7 +256,8 @@ Ventajas:
 - Evitar bloques demasiado largos.
 - Comentar solo lo necesario.
 - Mantener una indentación consistente.
-- Dividir el código en métodos pequeños.
+- Dividir el codigo en métodos pequeños.
+
 
 * Ejemplo completo
 
